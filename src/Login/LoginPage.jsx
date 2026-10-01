@@ -21,6 +21,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        navigate("/landingpage");
 
         console.log("Login Data:", formData);
 
@@ -146,6 +147,7 @@ const Login = () => {
 
                         {/* Login Button */}
                         <button
+                            onClick={handleSubmit}
                             type="submit"
                             className="group relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 py-3.5 font-semibold shadow-lg shadow-blue-500/20 transition duration-300 hover:scale-[1.02] hover:shadow-blue-500/40"
                         >
