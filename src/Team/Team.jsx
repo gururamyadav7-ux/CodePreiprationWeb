@@ -3,7 +3,7 @@ import { HiArrowCircleUp } from "react-icons/hi";
 const Team = () => {
   return (
     <div>
-      <div className="w-96 h-auto flex border-2 border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 hover:border-blue-500 hover:scale-105">
+      <div className="items-center flex border-2 border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 hover:border-blue-500 hover:scale-105">
         <div className="w-[50%] h-full flex flex-col items-start gap-4 p-2 bg-gray-950 text-medium text-white">
           <div>
             <h2>Service Box</h2>
