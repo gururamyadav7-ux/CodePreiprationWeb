@@ -1,8 +1,9 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "./App";
-import Login from "./componant/login/Login";
-import Register from "../src/componant/register/Register"
-import ForgetP from "./componant/forgetpassword/ForgetP";
+import Login from "./Login/LoginPage";
+import Register from "./Register/RegisterPage";
+import OTPVerify from "./OTPVerify/OTPVerify";
+import ForgotPassword from "./ForgetPassword/ForgetPassword";
 
 export const router = createBrowserRouter([
     {
@@ -11,17 +12,21 @@ export const router = createBrowserRouter([
     },
     {
         path: "/forgot-password",
-        element: <ForgetP />,
+        element: <ForgotPassword />,
     },
     {
         path: "/register",
         element: <Register />,
     },
     {
+        path: "/OTPVerify",
+        element: <OTPVerify />,
+    },
+    {
         path: "/landingpage",
         element: <App />,
     },
-    
+
     {
         path: "*",
         element: <Navigate to="/" replace />,

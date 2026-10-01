@@ -11,7 +11,7 @@ import { SiNextdotjs } from "react-icons/si";
 
 const Course = () => {
   return (
-    <div className="lg:h-screen h-auto bg-gray-950 lg:px-10 lg:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-3 pb-3 lg:gap-5">
+    <div className="lg:h-screen h-auto bg-slate-950 lg:px-10 lg:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-3 pb-3 lg:gap-5">
       <CourseCord
         icon={<FaHtml5 className="text-5xl text-red-600" />}
         title="HTML5"

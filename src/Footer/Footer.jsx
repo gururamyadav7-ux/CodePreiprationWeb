@@ -23,7 +23,7 @@ const Footer = () => {
           <div>
             <h2 className="text-3xl font-extrabold">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                WebX
+                UIScodehelp
               </span>
             </h2>
 
@@ -176,7 +176,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-5 text-sm text-slate-500 md:flex-row">
 
           <p>
-            © {new Date().getFullYear()} WebX. All rights reserved.
+            © {new Date().getFullYear()} UIScodehelp. All rights reserved.
           </p>
 
           <div className="flex gap-6">

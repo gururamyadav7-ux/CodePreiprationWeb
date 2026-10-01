@@ -1,9 +1,8 @@
-import { SiCodemagic } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 import { SiGooglesummerofcode } from "react-icons/si";
 import {
     ArrowRight,
     Play,
-    Sparkles,
     CheckCircle2,
     Zap,
     ShieldCheck,
@@ -11,16 +10,17 @@ import {
 } from "lucide-react";
 
 const LandingPage = () => {
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen overflow-hidden bg-slate-950 text-white">
 
             {/* ================= NAVBAR ================= */}
-            <nav className="relative z-50 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+            <nav className="relative border-b border-slate-700 z-50 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
 
                 {/* Logo */}
                 <div className="flex items-center gap-2">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/30">
-                        <SiGooglesummerofcode size={35}/>
+                        <SiGooglesummerofcode size={35} />
                     </div>
 
                     <span className="text-xl font-bold tracking-tight">
@@ -47,8 +47,18 @@ const LandingPage = () => {
                     </a>
                 </div>
 
+                {/* login input button */}
+                <div className="hidden md:block">
+                    <button onClick={() => navigate("/login")} className="rounded-full border border-slate-700 bg-white/5 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition hover:border-blue-500 hover:bg-blue-500/10">
+                        Log in
+                    </button>
+                    <button onClick={() => navigate("/register")} className="ml-4 rounded-full bg-blue-500 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-600">
+                        Sign up
+                    </button>
+                </div>
+
                 {/* Navbar Button */}
-                <button className="hidden rounded-full border border-slate-700 bg-white/5 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition hover:border-blue-500 hover:bg-blue-500/10 md:block">
+                <button onClick={() => navigate("/get-started")} className="hidden rounded-full border border-slate-700 bg-white/5 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition hover:border-blue-500 hover:bg-blue-500/10 md:block">
                     Get Started
                 </button>
             </nav>
@@ -90,7 +100,7 @@ const LandingPage = () => {
                     {/* Buttons */}
                     <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
 
-                        <button className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-7 py-3.5 font-semibold shadow-xl shadow-blue-600/20 transition duration-300 hover:-translate-y-1 hover:shadow-blue-500/40">
+                        <button onClick={() => navigate("/get-started")} className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-7 py-3.5 font-semibold shadow-xl shadow-blue-600/20 transition duration-300 hover:-translate-y-1 hover:shadow-blue-500/40">
                             Start Building
 
                             <ArrowRight
@@ -99,7 +109,7 @@ const LandingPage = () => {
                             />
                         </button>
 
-                        <button className="flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-7 py-3.5 font-semibold backdrop-blur-md transition hover:border-slate-500 hover:bg-white/10">
+                        <button onClick={() => navigate("/watch-demo")} className="flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-7 py-3.5 font-semibold backdrop-blur-md transition hover:border-slate-500 hover:bg-white/10">
                             <Play size={16} fill="currentColor" />
                             Watch Demo
                         </button>

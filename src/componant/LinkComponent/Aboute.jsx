@@ -28,7 +28,7 @@ const Aboute = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto bg-gray-950 p-5 ">
+    <div className="w-full h-auto bg-slate-950  p-5 ">
       <div className="w-full flex items-center justify-center">
         <figure>
           <img

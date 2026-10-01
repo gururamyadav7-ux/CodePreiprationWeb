@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Project = () => {
   return (
-    <div className="h-auto bg-gray-950 text-white p-10">
+    <div className="h-auto bg-slate-950 text-white p-10">
       <h1 className="text-3xl text-white font-bold mb-10">Project</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
         <div className="group rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition duration-500 hover:-translate-y-2 hover:border-blue-500/30 hover:bg-white/[0.06]"
@@ -39,7 +39,7 @@ const Project = () => {
             <li className="text-gray-400">
               Analytics and reporting for user engagement and growth
             </li>
-            <li className="text-gray-700">
+            <li className="text-gray-400">
               Security measures to protect user data and prevent unauthorized
               access
             </li>
