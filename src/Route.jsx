@@ -4,10 +4,11 @@ import Login from "./Login/LoginPage";
 import Register from "./Register/RegisterPage";
 import OTPVerify from "./OTPVerify/OTPVerify";
 import ForgotPassword from "./ForgetPassword/ForgetPassword";
+import Getstart from "./Getsatart/Getstart";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/login",
         element: <Login />,
     },
     {
@@ -23,8 +24,12 @@ export const router = createBrowserRouter([
         element: <OTPVerify />,
     },
     {
-        path: "/landingpage",
+        path: "/",
         element: <App />,
+    },
+    {
+        path: "/get-started",
+        element: <Getstart />,
     },
 
     {
