@@ -88,12 +88,12 @@ const HerosectionPage = () => {
                     </button>
                 </div>
                 <div className=" relative w-1/2 h-full hidden lg:block">
-                    <img ref={boxRef1} src={image[0].src} alt={image[0].alt} className=" absolute z-50" />
-                    <img ref={boxRef2} src={image[1].src} alt={image[1].alt} className=" absolute z-40" />
-                    <img ref={boxRef3} src={image[2].src} alt={image[2].alt} className=" absolute z-30" />
+                    <img ref={boxRef1} src={image[0].src} alt={image[0].alt} className=" absolute z-40" />
+                    <img ref={boxRef2} src={image[1].src} alt={image[1].alt} className=" absolute z-30" />
+                    <img ref={boxRef3} src={image[2].src} alt={image[2].alt} className=" absolute z-20" />
                     <img ref={boxRef4} src={image[3].src} alt={image[3].alt} className=" absolute z-20" />
                     <img ref={boxRef5} src={image[4].src} alt={image[4].alt} className=" absolute z-10" />
-                    <img ref={boxRef6} src={image[5].src} alt={image[5].alt} className=" absolute z-0" />
+                    <img ref={boxRef6} src={image[5].src} alt={image[5].alt} className=" absolute z-10" />
                     <img ref={boxRef7} src={image[6].src} alt={image[6].alt} className=" absolute z-0" />
                 </div>
             </div>

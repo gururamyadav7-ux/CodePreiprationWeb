@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { SiGooglesummerofcode } from "react-icons/si";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -91,7 +92,7 @@ const Header = () => {
                 hover:shadow-purple-500/40
                 transition-all duration-300"
                         >
-                            Get Started
+                            <MdOutlineShoppingCart size={22} />
 
                             <ArrowUpRight
                                 size={16}
@@ -139,10 +140,11 @@ const Header = () => {
                                 Login
                             </button>
 
-                            <button className="w-full mt-2 py-3 rounded-xl
-                font-semibold text-white
-                bg-gradient-to-r from-blue-600 to-purple-600">
-                                Get Started
+                            <button className="w-full items-center justify-center flex mt-2 py-3 rounded-xl
+                                                font-semibold text-white
+                                                bg-gradient-to-r from-blue-600 to-purple-600
+                            ">
+                                <MdOutlineShoppingCart size={25} />
                             </button>
                         </div>
                     </div>

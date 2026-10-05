@@ -34,7 +34,7 @@ const Aboute = () => {
           <img
             ref={boxRef}
             className="w-40 h-40 rounded-xl"
-            src="src\assets\gururamphotu.jpg"
+            src="https://ik.imagekit.io/atypchdh0/gururamphotu.jpg"
             alt=""
           />
           <h1 className="text-2xl font-bold text-orange-600">GURU RAM</h1>

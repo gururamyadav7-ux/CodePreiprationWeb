@@ -1,4 +1,4 @@
-
+import { SiGooglesummerofcode } from "react-icons/si";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -7,7 +7,6 @@ import {
     Lock,
     Mail,
     User,
-    Sparkles,
 } from "lucide-react";
 
 const Register = () => {
@@ -63,7 +62,7 @@ const Register = () => {
                     <div className="mb-7 text-center">
 
                         <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 shadow-lg shadow-cyan-500/20">
-                            <Sparkles size={26} />
+                            <SiGooglesummerofcode size={26} />
                         </div>
 
                         <h1 className="text-3xl font-bold">

@@ -3,41 +3,52 @@ import { Check, Sparkles } from "lucide-react";
 
 const plans = [
     {
-        name: "Basic",
-        price: "₹299",
+        name: "Standard",
+        price: "$59",
         description: "Perfect for getting started.",
         features: [
-            "5 Projects",
-            "Basic Analytics",
-            "Email Support",
-            "1 GB Storage",
+            "One end products",
+            "12 months updates",
+            "6 months of support",
+            "JavaScript version",
+        ],
+        features2: [
+            "TypeScript version",
+            "Design resources",
+            "Commercial applications"
         ],
         button: "Get Started",
     },
     {
-        name: "Premium",
-        price: "₹799",
-        description: "Everything you need to grow.",
+        name: "POPULAR",
+        price: "$99",
+        description: "Plus",
         popular: true,
         features: [
-            "Unlimited Projects",
-            "Advanced Analytics",
-            "Priority Support",
-            "50 GB Storage",
-            "Premium Features",
+            "One end products",
+            "12 months updates",
+            "6 months of support",
+            "JavaScript version",
+            "TypeScript version",
+            "Design resources",
+        ],
+        features2: [
+            "Commercial applications"
         ],
         button: "Start Premium",
     },
     {
-        name: "Enterprise",
-        price: "₹1499",
-        description: "Powerful tools for your team.",
+        name: "Extended",
+        price: "$249",
+        description: "Powerful tools for your teamwork.",
         features: [
-            "Unlimited Projects",
-            "Advanced Analytics",
-            "24/7 Support",
-            "500 GB Storage",
-            "Team Collaboration",
+            "One end products",
+            "12 months updates",
+            "6 months of support",
+            "JavaScript version",
+            "TypeScript version",
+            "Design resources",
+            "Commercial applications"
         ],
         button: "Choose Enterprise",
     },
@@ -102,10 +113,6 @@ const PricingCard = () => {
                                     <span className="text-5xl font-black">
                                         {plan.price}
                                     </span>
-
-                                    <span className="mb-2 text-gray-500">
-                                        /month
-                                    </span>
                                 </div>
 
                                 {/* Button */}
@@ -140,7 +147,6 @@ const PricingCard = () => {
                                         </div>
                                     ))}
                                 </div>
-
                             </div>
                         </div>
                     ))}

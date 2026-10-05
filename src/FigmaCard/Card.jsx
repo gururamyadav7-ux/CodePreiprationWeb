@@ -1,6 +1,6 @@
-
-import { ArrowUpRight, Heart, MoreHorizontal, Sparkles } from "lucide-react";
-const Card = ({ src, time, key, userName, webSiteName }) => {
+import { SiGooglesummerofcode } from "react-icons/si";
+import { ArrowUpRight, Heart, MoreHorizontal } from "lucide-react";
+const Card = ({ time, src, key, webSiteName }) => {
     return (
         <div key={key} >
             {/* Card */}
@@ -8,21 +8,13 @@ const Card = ({ src, time, key, userName, webSiteName }) => {
 
                 {/* Preview */}
                 <div className="relative h-64 overflow-hidden bg-[#1e1e1e]">
-
-                    {/* Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#ff7262] via-[#a259ff] to-[#1abcfe] opacity-90" />
-
-                    {/* Shapes */}
-                    <div className="absolute left-10 top-10 h-24 w-24 rounded-full bg-white/20 blur-sm" />
-
-                    <div className="absolute bottom-8 right-8 h-32 w-32 rotate-12 rounded-3xl bg-white/20 backdrop-blur-md" />
-
-                    <div className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 rotate-12 items-center justify-center rounded-3xl bg-white shadow-2xl transition duration-500 group-hover:rotate-0 group-hover:scale-110">
-                        <Sparkles className="text-[#a259ff]" size={34} />
+                    <img className="w-full h-full" src={src} alt="" />
+                    <div className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 rotate-12 items-center justify-center rounded-full bg-white shadow-2xl transition duration-500 group-hover:rotate-0 group-hover:scale-110">
+                        <SiGooglesummerofcode className="text-[#a259ff]" size={30} />
                     </div>
 
                     {/* Top Buttons */}
-                    <button className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md transition hover:bg-black/40">
+                    <button className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/80 text-white backdrop-blur-md transition hover:bg-black/40">
                         <MoreHorizontal size={20} />
                     </button>
 
@@ -33,33 +25,6 @@ const Card = ({ src, time, key, userName, webSiteName }) => {
 
                 {/* Content */}
                 <div className="p-6">
-
-                    {/* User */}
-                    <div className="flex items-center justify-between">
-
-                        <div className="flex items-center gap-3">
-                            <img
-                                src={src}
-                                alt="User"
-                                className="h-11 w-11 rounded-full object-cover"
-                            />
-
-                            <div>
-                                <h3 className="font-semibold text-[#1e1e1e]">
-                                    {userName || "Creative Studio"}
-                                </h3>
-
-                                <p className="text-xs text-gray-500">
-                                    @creative_design
-                                </p>
-                            </div>
-                        </div>
-
-                        <span className="rounded-full bg-[#a259ff]/10 px-3 py-1 text-xs font-semibold text-[#7c3aed]">
-                            Pro
-                        </span>
-                    </div>
-
                     {/* Title */}
                     <h2 className="mt-6 text-2xl font-bold tracking-tight text-[#1e1e1e]">
                         {webSiteName || "Figma Design System"}
