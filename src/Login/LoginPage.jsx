@@ -1,11 +1,17 @@
 import { SiGooglesummerofcode } from "react-icons/si";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Eye, EyeOff, Lock, Mail} from "lucide-react";
+import { Eye, EyeOff, Lock, Mail } from "lucide-react";
+import axios from "axios";
+import { IoIosAlert } from "react-icons/io";
+import { IoCheckmarkCircle } from "react-icons/io5";
 
 const Login = () => {
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false)
+    const [loding, setLoding] = useState(false)
 
     const [formData, setFormData] = useState({
         email: "",
@@ -19,11 +25,43 @@ const Login = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => {
+                setSuccess(false);
+                navigate("/")
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+        if (error) {
+            const timer = setTimeout(() => {
+                setError(false);
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [success, error]);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        navigate("/landingpage");
 
         console.log("Login Data:", formData);
+        setLoding(true)
+        try {
+            const response = await axios.post(
+                "http://localhost:4000/api/auth/login",
+                formData,
+                {
+                    withCredentials: true,
+                }
+            );
+
+            console.log("Login Success:", response.data);
+            setSuccess(true)
+        } catch (error) {
+            console.log("Login Error:", error.response?.data);
+            setError(true)
+        }
+        setLoding(false)
 
         // Axios login API yaha call kar sakte ho
     };
@@ -152,7 +190,7 @@ const Login = () => {
                             className="group relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 py-3.5 font-semibold shadow-lg shadow-blue-500/20 transition duration-300 hover:scale-[1.02] hover:shadow-blue-500/40"
                         >
                             <span className="relative z-10">
-                                Login
+                                {loding ? "Login..." : "Login"}
                             </span>
 
                             <span className="absolute inset-0 -translate-x-full bg-white/20 transition duration-500 group-hover:translate-x-full" />
@@ -182,6 +220,12 @@ const Login = () => {
                     </p>
 
                 </div>
+                {success ? <div className=" fixed top-3 left-1/2 -translate-x-1/2">
+                    <p className="text-white  rounded-xl border border-white px-5 flex items-center py-2 bg-green-600 ">User Login successful <IoCheckmarkCircle size={25} className="text-white ml-3" /> </p>
+                </div> : ""}
+                {error ? <div className=" fixed top-3 left-1/2 -translate-x-1/2">
+                    <p className="text-white  rounded-xl border border-white px-5 flex items-center py-2 bg-red-600 ">User Login faild <IoIosAlert size={25} className="text-white ml-3" /> </p>
+                </div> : ""}
             </div>
         </div>
     );
